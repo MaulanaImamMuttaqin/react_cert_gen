@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+  font-family: 'Roboto';
+  scroll-behavior: smooth;
+}
+.center {
+    @apply flex justify-center items-center;
+  }
+.center-child{
+@apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+.button-style {
+  @apply bg-gradient-to-br from-blue-600 to-blue-500 text-gray-300;
+}
+.menu-style{
+  @apply h-14 pl-5 flex items-center gap-7 my-5 relative;
+}
+.active{
+  @apply rounded-l-xl Colors-Blue;
+}
+
+.active::before{
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 #4187f6;
+
+}
+.active::after{
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 #4187f6;
+}
+.gradient-lp{
+  background: rgb(88,82,181);
+background: linear-gradient(120deg, rgba(88,82,181,0.8519782913165266) 0%, rgba(44,38,142,0.9304096638655462) 44%, rgba(53,49,162,1) 67%, rgba(13,12,110,1) 100%);
+}
+
+.gradient-lp-second{
+  background: rgb(88,82,181);
+background: linear-gradient(120deg, rgba(88,82,181,1) 0%, rgba(44,38,142,1) 44%, rgba(53,49,162,1) 67%, rgba(13,12,110,1) 100%);
+}
+
+.gradient-dashboard{
+  background: rgb(1,2,19);
+background: linear-gradient(148deg, rgba(1,2,19,1) 0%, rgba(22,19,79,1) 100%);
+}
+.gradient-dashboard-content{
+  background: rgb(20,23,57);
+background: linear-gradient(148deg, rgba(20,23,57,1) 0%, rgba(49,46,110,1) 100%);
+}
+
+table, th, td {
+  padding: 10px 0;
+  border-bottom:2px solid rgb(189, 189, 189);
+  text-align: center;
+}
+.Colors-Blue{
+  background-color: #4187f6;
+}
+
+
+#question:hover + #hint{
+  opacity: 1;
+}
